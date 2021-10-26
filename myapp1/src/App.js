@@ -3,7 +3,7 @@ import './App.css';
 
 export function Final() {
   return (
-    <div>
+    <div className="finpagina">
       <h3>Esto es un pie de página</h3>
     </div>
   );
@@ -11,7 +11,7 @@ export function Final() {
 
 export function Inicio() {
   return (
-    <div>
+    <div className="encabezado">
       <h1>
       Primera App en React
       </h1>

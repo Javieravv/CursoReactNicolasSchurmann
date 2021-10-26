@@ -14,9 +14,33 @@
 }
 
 h2 {
-  border-top: 2px blue solid;
+  /* border-top: 2px blue solid; */
   color: red;
   text-align: center;
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.encabezado {
+  width: 100%;
+  min-height: 50px;
+  background-color: green;
+  text-align: center;
+  color: white;
+}
+
+.finpagina {
+  min-height: 150px;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+
 }
 
 .App-header {
