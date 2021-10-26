@@ -13,6 +13,12 @@
   }
 }
 
+h2 {
+  border-top: 2px blue solid;
+  color: red;
+  text-align: center;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,3 +42,5 @@
     transform: rotate(360deg);
   }
 }
+
+
