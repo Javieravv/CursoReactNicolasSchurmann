@@ -1,33 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+// Componentes basados en clase.
 
-export function Final() {
-  return (
-    <div className="finpagina">
-      <h3>Esto es un pie de página</h3>
-    </div>
-  );
+import { Component  } from 'react'
+
+class Input extends Component {
+  // state = { valor: ''}
+
+  // // Esto funciona como una propiedad, pero que es una arrow function
+  // hadleChange = (value) => {
+  //   this.setState ( { valor: value })
+  // }
+
+  render () {
+    return (
+      <input 
+        value={this.props.value}
+        onChange={this.props.onChange}
+      />
+    )
+  }
+
 }
 
-export function Inicio() {
-  return (
-    <div className="encabezado">
-      <h1>
-      Primera App en React
-      </h1>
-    </div>
-  );
+
+class App extends Component {
+  state = { 
+    nombre: '',
+    apellido: '',
+  }
+
+  updateValues = (prop, value) => {
+    // Uso de propiedades dinámicas, con los paréntesis angulares.
+    this.setState ({ [prop]: value } )
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Nombre Completo:</h1>
+        <h2>{`${this.state.nombre} ${this.state.apellido}`}</h2>
+        <Input
+          value={this.state.nombre}
+          onChange={e => this.updateValues('nombre', e.target.value)}
+        />
+        <Input
+        value={this.state.apellido}
+        onChange={e => this.updateValues('apellido', e.target.value)}
+        />
+      </div>
+    )
+  }
 }
 
-function App() {
-  return (
-    <div className="App">
-      <h2>Estamos aprendiendo React</h2>
-      <p>
-      No ha sido fácil porque es difícil configurlo en Windows10.
-      </p>
-    </div>
-  );
-}
-
-export default App;
+export default App

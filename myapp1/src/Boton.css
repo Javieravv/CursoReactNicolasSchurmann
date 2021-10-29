@@ -1,0 +1,19 @@
+/* Estilos para el componente botón, conforme a las clases que se crean
+ */
+
+ .btn {
+     transition: all 0.4s ease-in-out;
+     background-color: #057;
+     color: white;
+     min-height: 50px;
+     min-width: 150px;
+     padding: 5px 5px;
+     border-radius: 10px;
+     border: none;
+     margin: 2px 2px;
+ }
+
+ .btn:hover {
+    cursor: pointer;
+    background-color: rgb(64, 178, 223);
+ }

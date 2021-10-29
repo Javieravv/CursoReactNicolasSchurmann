@@ -13,43 +13,11 @@
   }
 }
 
-h2 {
-  /* border-top: 2px blue solid; */
-  color: red;
-  text-align: center;
-}
-
-h3 {
-  color: blue;
-  font-weight: bold;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.encabezado {
-  width: 100%;
-  min-height: 50px;
-  background-color: green;
-  text-align: center;
-  color: white;
-}
-
-.finpagina {
-  min-height: 150px;
-  background-color: aquamarine;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -68,5 +36,3 @@ h3 {
     transform: rotate(360deg);
   }
 }
-
-
