@@ -1,0 +1,17 @@
+/* Estgilols para el botón */
+
+button.button {
+    transition: all 0.5s ease;
+    background-color:#2185d0;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer
+}
+
+button.button:hover {
+    background-color: #1678c2;
+}

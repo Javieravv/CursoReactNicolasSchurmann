@@ -1,0 +1,21 @@
+// componente personalizado de Select
+// Recibe este componente un name, que es obligatorio, y label
+
+import { useField } from 'formik'
+
+const Select = ( { label, ...props}) => {
+    const [field, meta] = useField(props)
+    console.log('Objeto field', field)
+    return (
+        <div>
+            <label>{label}</label>
+            <select {...field} {...props}  />
+            {meta.touched && meta.error 
+                ? <div>{meta.error}</div>
+                : null 
+            }
+        </div>
+    )
+}
+
+export default Select

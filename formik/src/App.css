@@ -28,32 +28,6 @@
   color: #61dafb;
 }
 
-.containerform {
-  padding: 20px;
-}
-
-.listausuario {
-  margin-top: 10px;
-  padding: 0px 0px;
-  box-sizing: border-box;
-}
-.filausuario {
-  display: inline-block;
-  list-style: none;
-  padding: 12px 0; 
-  background-color: rgba(255, 255, 255, 0.424);
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.filausuario span {
-  margin-left: 10px;
-}
-
-.filausuario:hover {
-  background-color: rgba(34, 18, 177, 0.424);
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
