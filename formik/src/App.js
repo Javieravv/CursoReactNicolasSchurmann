@@ -2,6 +2,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import TextInput from './components/TextInput'
 import CheckBox from './components/CheckBox'
 import Select from './components/Select'
+import Radio from './components/Radio'
+
 
 const validate = (values) => {
   const errors = {}
@@ -19,6 +21,11 @@ const validate = (values) => {
       errors.lastname='El apellido es muy corto'
   }
 
+  // validar campo profesión
+  if (!values.profesion) {
+    errors.profesion='Profesión Requerida'
+  }
+
  return errors
 }
 
@@ -32,8 +39,8 @@ function App() {
         email: '',
         description: '',
         city: '',
-        nombre: '',
         accept: false,
+        profesion: ''
       }}
       validate={validate}
       onSubmit={values => console.log (values)}
@@ -61,6 +68,12 @@ function App() {
           <CheckBox name='accept' >
             Aceptar términos y condiciones
           </CheckBox>
+          <br />
+          <Radio name='profesion' value='abogado' label='Abogado' />
+          <Radio name='profesion' value='estudiante' label='Estudiante' />
+          <Radio name='profesion' value='ingeniero' label='Ingeniero' />
+          <Radio name='profesion' value='medico' label='Médico' />
+          <ErrorMessage name='profesion' />
           <button type='submit'>Enviar formulario</button>
         </Form>
     </Formik>

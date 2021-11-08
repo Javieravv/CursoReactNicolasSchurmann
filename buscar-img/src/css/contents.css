@@ -1,0 +1,45 @@
+/* Css para el contenido de las imágenes */
+
+.container {
+    margin-top: 15px;
+    display: 'flex';
+    justify-content: center;
+    background-color: #eee;
+    margin-bottom: 1px;
+}
+
+.center { 
+    column-count: 3;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+article {
+    width: 370px;
+    display: inline-block;
+    transition: box-shadow 0.2s ease;
+    margin: 40px 10px 0, 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+article > img {
+    width: inherit;
+    border-radius: 8px 8px 0 0;
+}
+
+article > p {
+    margin: 10px 15px;
+}
+
+article:hover {
+    box-shadow: 0px 3px 5px rgb(0,0,0,0.2);
+}
+
+footer {
+    border-top: 2px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
