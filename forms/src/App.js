@@ -67,7 +67,7 @@ const  App = () => {
       />
 
       <div>
-        <label>Profesión</label>
+        <label>Profesión:</label>
         <input 
           onChange={handleChange} 
           type='radio' 
