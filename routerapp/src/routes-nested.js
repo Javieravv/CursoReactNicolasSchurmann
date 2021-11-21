@@ -1,0 +1,73 @@
+import { Routes, Route, Link } from 'react-router-dom'
+
+const Portafolio = () => {
+  return (
+    <div>
+      <h1>Portafolio de servicios</h1>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <ul>
+        <li>
+          <Link to={'/portafolio/proyecto-1'}>Ir a Proyecto 1 </Link>
+        </li>
+        <li>
+          <Link to={'/portafolio/proyecto-2'}>Ir a Proyecto 2 </Link>
+        </li>
+        <li>
+            <Link to="/">Inicio</Link>
+          </li>
+      </ul>
+      <section>
+        <Routes>
+          <Route path="proyecto-1" element = {<h1>Proyecto 1</h1>} />
+          <Route path="proyecto-2" element = {<h1>Proyecto 2</h1>} />
+          <Route path="/" element={<h1>Ruta Inicio</h1>} />
+        </Routes>
+      </section>
+    </div>
+  )
+}
+
+const Productos = () => {
+  return (
+    <div>
+      <h1>Productos ofrecidos</h1>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      <h2>Primeros pasos con React Router-.</h2>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="/portafolio">Portafolio</Link>
+          </li>
+          <li>
+            <Link to="/productos">Productos</Link>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <Routes>
+          <Route path="/" element={<h1>Ruta Inicio</h1>} />
+          <Route path="/portafolio/*" element = {<Portafolio />} />
+          <Route path="/productos" element = {<Productos />} />
+        </Routes>
+      </section>
+    </div>
+  );
+}
+
+export default App;
